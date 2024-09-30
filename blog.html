@@ -12,45 +12,45 @@
 
 </head>
 <body>
-    <header class="bg-red-50 mb-16">
-        <nav class="w-4/5 mx-auto">
-            <div class="flex justify-between p-6 items-center">
+  <header class="bg-red-50 mb-14 lg:mb-28">
+    <nav class=" w-[90%] lg:w-4/5 mx-auto">
+        <div class="flex justify-between py-6  lg:p-6 items-center">
 
-                <!-- blog button  -->
-                <button id="btn-home"  class="btn hover:bg-lime-300 bg-lime-300 flex font-semibold text-xl">Home</button>
-                <div class="flex items-center gap-2">
-                    <img src="./img/logo.png" alt="Donate Bangladesh Logo">
-                    <h2 class="font-semibold text-xl">Donate Bangladesh</h2>
-                </div>
-                <div class="flex gap-2 items-center">
-                    <img src="./img/coin.png" alt="coin">
-                    <h3 class="font-medium text-xl">5500</h3>
-                    <h3 class="font-medium text-xl">BDT</h3>
-                </div>
+            <!-- blog button  -->
+            <button id="btn-home"  class="btn hover:bg-lime-300 bg-lime-300 flex font-semibold lg:text-xl px-6">Home</button>
+            <div class="flex items-center gap-1 ml-9 lg:ml-0 lg:gap-2">
+                <img class="w-10" src="./img/logo.png" alt="Donate Bangladesh Logo">
+                <h2 class="font-semibold lg:text-xl w-[50%] lg:w-full ">Donate Bangladesh</h2>
             </div>
-        </nav>
-    </header>
+            <div class="flex gap-1 lg:gap-2 items-center mr-5">
+                <img src="./img/coin.png" alt="coin">
+                <h3 id="main-balance" class="font-medium lg:text-xl">5500</h3>
+                <h3 class="font-medium lg:text-xl">BDT</h3>
+            </div>
+        </div>
+    </nav>
+</header>
 
 
     <!-- section Accordion -->
 
-    <section class="w-4/5 mx-auto mb-20">
+    <section class="w-[90%] lg:w-4/5 mx-auto mb-20">
       <div class="flex items-center">
-        <h2 class="text-4xl font-bold">Important FAQ </h2>
-        <span class=""><img class="w-32 " src="./img/question.jpg" alt=""></span>
+        <h2 class="text-3xl lg:text-4xl font-bold">Important FAQ </h2>
+        <span class=""><img class="lg:w-32 w-24 " src="./img/question.jpg" alt=""></span>
       </div>
 
       <!-- 1 -->
-        <div class="collapse collapse-arrow bg-base-200 py-5 px-20 rounded-none ">
+        <div class="collapse collapse-arrow bg-base-200 lg:py-5 lg:px-20 rounded-none ">
             <input type="radio" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+            <div class="collapse-title text-xl font-medium w-full">What is the Document Object Model (DOM)?</div>
             <div class="collapse-content">
-              <p class="w-5/6">The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects (or nodes), allowing developers to access, modify, and interact with the content, structure, and styles of a webpage dynamically.</p>
+              <p class="lg:w-5/6 w-[90%]">The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects (or nodes), allowing developers to access, modify, and interact with the content, structure, and styles of a webpage dynamically.</p>
             </div>
           </div>
 
           <!-- 2 -->
-        <div class="collapse collapse-arrow bg-base-200 py-5 px-20 rounded-none">
+        <div class="collapse collapse-arrow bg-base-200 lg:py-5 lg:px-20 rounded-none">
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
             <div class="collapse-content">
@@ -59,7 +59,7 @@
           </div>
 
           <!-- 3 -->
-        <div class="collapse collapse-arrow bg-base-200 py-5 px-20 rounded-none">
+        <div class="collapse collapse-arrow bg-base-200 lg:py-5 lg:px-20 rounded-none">
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
             <div class="collapse-content">
@@ -69,7 +69,7 @@
 
 
           <!-- 4 -->
-        <div class="collapse collapse-arrow bg-base-200 py-5 px-20 rounded-none">
+        <div class="collapse collapse-arrow bg-base-200 lg:py-5 lg:px-20 rounded-none">
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title text-xl font-medium">How do you manipulatean element's attributes and styles using the DOM?</div>
             <div class="collapse-content">

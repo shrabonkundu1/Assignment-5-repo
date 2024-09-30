@@ -12,62 +12,174 @@
 
 </head>
 <body >
-    <header class="bg-red-50 mb-28">
-        <nav class="w-4/5 mx-auto">
-            <div class="flex justify-between p-6 items-center">
+    <header class="bg-red-50 mb-14 lg:mb-28">
+        <nav class=" w-[90%] lg:w-4/5 mx-auto">
+            <div class="flex justify-between py-6  lg:p-6 items-center">
 
                 <!-- blog button  -->
-                <button id="btn-blog"  class="btn hover:bg-lime-300 bg-lime-300 flex font-semibold text-xl px-6">Blog</button>
-                <div class="flex items-center gap-2">
-                    <img src="./img/logo.png" alt="Donate Bangladesh Logo">
-                    <h2 class="font-semibold text-xl">Donate Bangladesh</h2>
+                <button id="btn-blog"  class="btn hover:bg-lime-300 bg-lime-300 flex font-semibold lg:text-xl px-6">Blog</button>
+                <div class="flex items-center gap-1 ml-9 lg:ml-0 lg:gap-2">
+                    <img class="w-10" src="./img/logo.png" alt="Donate Bangladesh Logo">
+                    <h2 class="font-semibold lg:text-xl w-[50%] lg:w-full ">Donate Bangladesh</h2>
                 </div>
-                <div class="flex gap-2 items-center">
+                <div class="flex gap-1 lg:gap-2 items-center mr-5">
                     <img src="./img/coin.png" alt="coin">
-                    <h3 class="font-medium text-xl">5500</h3>
-                    <h3 class="font-medium text-xl">BDT</h3>
+                    <h3 id="main-balance" class="font-medium lg:text-xl">5500</h3>
+                    <h3 class="font-medium lg:text-xl">BDT</h3>
                 </div>
             </div>
         </nav>
     </header>
 
+    <!-- header section end  -->
+
      <!-- button section -->
  <section class="flex gap-3 justify-center mb-8">
-    <button id="btn-blog"  class="btn hover:bg-grey-50  active:bg-lime-300 bg-slate-100 flex font-semibold text-xl px-6 " >Donation</button>
-    <button class="btn  hover:bg-grey-50  active:bg-lime-300 bg-slate-100 flex font-semibold text-xl px-6  ">History</button>
+    <button id="btn-donation"  class="focus:bg-lime-300 btn hover:bg-grey-50 font  bg-lime-300 flex font-semibold text-xl px-6 " >Donation</button>
+    <button id="btn-history" class="btn  hover:bg-grey-50  focus:bg-lime-300 bg-slate-100 flex font-semibold text-xl px-6  ">History</button>
  </section>
 
 
  <!-- Donation card section  -->
 
- <section>
+ <section id="donation-section" class="space-y-10 mb-24">
 
 
     <!-- card 1 start-->
-    <div class="hero  space-y-2 flex w-[70%] mx-auto border-2  border-grey-200 p-8 rounded-lg">
+    <div class="hero  space-y-2 flex flex-col lg:flex-row w-[90%] lg:w-[70%] mx-auto border-2  border-grey-200 p-8 rounded-lg">
         <div class=" flex-col p-0  lg:flex-row flex-1">
             <img src="./img/noakhali.png" alt="noakhali flood image">
         </div>
           <div class="flex-1">
             <button class="btn bg-gray-200 mb-3">
                 <img src="./img/coin.png" alt="coin">
-                 <p class="text-xl">1000</p>
+                 <p id="donation-balance" class="text-xl">1000</p>
                  <p class="text-xl">BDT</p>
             </button>
-            <h1 class="text-2xl font-bold space-y-3">Donate for Flood at Noakhali, Bangladesh</h1>
+            <h1 id="donation-heading" class="text-2xl font-bold space-y-3">Donate for Flood at Noakhali, Bangladesh</h1>
             <p class="py-5">
                 Floods in Noakhali, Bangladesh, have caused immense destruction, displacing countless families and disrupting daily life. Homes have been washed away, crops destroyed, and essential resources like clean water, food, and medical supplies are in dire shortage. Vulnerable communities are struggling to rebuild their lives amidst these challenging conditions.A donation, no matter how small, can provide vital support.
             </p>
-            <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-3 " />
+            <input id="input-donation" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-3 " />
             <br>
-            <button class="btn bg-lime-300 w-full font-bold text-xl">Donate Now</button>
+            <button id="btn-donate-now" class="btn hover:bg-lime-300 bg-lime-300 w-full font-bold text-xl" >Donate Now</button>
+
+            <!-- daisyUI Modal -->
+            <dialog id="my_modal_1" class="modal ">
+                <div class="modal-box flex flex-col space-y-3 justify-center items-center text-center">
+                  <h3 class="text-4xl font-extrabold mb-2">Congrates!</h3>
+                  <img class="pb-3" src="./img/coin.png" alt="coin">
+                  <p class="font-medium">You Have Donated for Humankind</p>
+                  <h5 class="font-bold text-xl">Successfully</h5>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn font-bold">close confirmation</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+              <!--  -->
           </div>
       </div>
       <!-- card 1 end -->
 
 
 
+    <!-- card 2 start-->
+    <div class="hero  space-y-2 flex flex-col lg:flex-row w-[90%] lg:w-[70%] mx-auto border-2  border-grey-200 p-8 rounded-lg">
+        <div class=" flex-col p-0  lg:flex-row flex-1">
+            <img src="./img/feni.png" alt="noakhali flood image">
+        </div>
+          <div class="flex-1">
+            <button class="btn bg-gray-200 mb-3">
+                <img src="./img/coin.png" alt="coin">
+                 <p id="donation-balance-2" class="text-xl">1000</p>
+                 <p class="text-xl">BDT</p>
+            </button>
+            <h1 id="donation-heading-2" class="text-2xl font-bold space-y-3">Donate for Flood Relief in Feni, Bangladesh</h1>
+            <p class="py-5">
+                Floods in Noakhali, Bangladesh, have caused immense destruction, displacing countless families and disrupting daily life. Homes have been washed away, crops destroyed, and essential resources like clean water, food, and medical supplies are in dire shortage. Vulnerable communities are struggling to rebuild their lives amidst these challenging conditions.A donation, no matter how small, can provide vital support.
+            </p>
+            <input id="input-donation-2" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-3 " />
+            <br>
+            <button id="btn-donate-now-2" class="btn hover:bg-lime-300 bg-lime-300 w-full font-bold text-xl">Donate Now</button>
+
+             <!-- daisyUI Modal -->
+             <dialog id="my_modal_1" class="modal ">
+                <div class="modal-box flex flex-col space-y-3 justify-center items-center text-center">
+                  <h3 class="text-4xl font-extrabold mb-2">Congrates!</h3>
+                  <img class="pb-3" src="./img/coin.png" alt="coin">
+                  <p class="font-medium">You Have Donated for Humankind</p>
+                  <h5 class="font-bold text-xl">Successfully</h5>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn font-bold">close confirmation</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+              <!--  -->
+          </div>
+      </div>
+      <!-- card 2 end -->
+
+
+
+    <!-- card 3  start-->
+    <div class="hero  space-y-2 flex flex-col lg:flex-row w-[90%] lg:w-[70%] mx-auto border-2  border-grey-200 p-8 rounded-lg">
+        <div class=" flex-col p-0  lg:flex-row flex-1">
+            <img src="./img/quota-protest (3).png" alt="noakhali flood image">
+        </div>
+          <div class="flex-1">
+            <button class="btn bg-gray-200 mb-3">
+                <img src="./img/coin.png" alt="coin">
+                 <p id="donation-balance-3" class="text-xl">1000</p>
+                 <p class="text-xl">BDT</p>
+            </button>
+            <h1 id="donation-heading-3" class="text-2xl font-bold space-y-3">Aid for Injured in the Quota Movement</h1>
+            <p class="py-5">
+                Floods in Noakhali, Bangladesh, have caused immense destruction, displacing countless families and disrupting daily life. Homes have been washed away, crops destroyed, and essential resources like clean water, food, and medical supplies are in dire shortage. Vulnerable communities are struggling to rebuild their lives amidst these challenging conditions.A donation, no matter how small, can provide vital support.
+            </p>
+            <input id="input-donation-3" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-3 " />
+            <br>
+            <button id="btn-donate-now-3" class="btn hover:bg-lime-300 bg-lime-300 w-full font-bold text-xl">Donate Now</button>
+
+             <!-- daisyUI Modal -->
+             <dialog id="my_modal_1" class="modal ">
+                <div class="modal-box flex flex-col space-y-3 justify-center items-center text-center">
+                  <h3 class="text-4xl font-extrabold mb-2">Congrates!</h3>
+                  <img class="pb-3" src="./img/coin.png" alt="coin">
+                  <p class="font-medium">You Have Donated for Humankind</p>
+                  <h5 class="font-bold text-xl">Successfully</h5>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn font-bold">close confirmation</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+              <!--  -->
+          </div>
+      </div>
+      <!-- card 3 end -->
+
+
+
  </section>
+
+
+ <!-- .history container section  -->
+
+ <section id="history-section" class="hidden w-[90%] lg:w-[70%] mx-auto ">
+    <div id="history-container" class="space-y-10 ">
+       <p id="date-time"></p>
+    </div>
+
+ </section>
+
 
    
 
@@ -77,6 +189,8 @@
 
 
     <script src="./js/index.js"></script>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/donate.js"></script>
     
 </body>
 </html>
